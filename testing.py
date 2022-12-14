@@ -5,6 +5,7 @@ import library_mang_sys
 
 
 
+
 class color: # add colors in script
    PURPLE = '\033[95m'
    CYAN = '\033[96m'
