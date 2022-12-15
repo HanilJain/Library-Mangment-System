@@ -27,7 +27,7 @@ Additional Feature (Brownie Challenge :cake: )
 * OpenPyXl
 
 # :inbox_tray: &nbsp; Installation &nbsp; :inbox_tray:
-Run the testing.py it is will required dependencies 
+Run the testing.py it will install required dependencies 
 
 ## Usuage 
 * Run Testing.py 
