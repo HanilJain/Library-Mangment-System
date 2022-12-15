@@ -270,15 +270,18 @@ elif '6' in option:
             shelf.remove_book(Book_name)
 
         elif '3' in option:
+            ask = input("\n"+color.BLUE + 'Do you want to get count of shelf(1) or whole library(2) : ' + color.END)
             book_tag = input(color.PURPLE + color.BOLD +'\n'+'Please Enter The genre you want (Fiction/Mature/Motivation) : ' + color.END )
-            shelf.get_book_count(book_tag)
+            shelf.get_book_count(book_tag , ask)
 
         elif '4' in option:
+            path = input("\n"+color.lightgreen+"Excel File ka path de na Love day : "+color.END)
             shelf.populate_book()
         else : 
             exiting()
   elif User_login() == False:
     "Login Failed !"
+    exiting()
 
   else : 
     exiting()

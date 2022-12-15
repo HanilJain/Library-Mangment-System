@@ -64,10 +64,10 @@ class software():
             return True
             time.sleep(2)
         else : 
-            print('\n' + color.RED + ' Book Not Available ! ')
+            print('\n' + color.RED + ' Book Not Available ! ' + color.END)
             return False
             time.sleep(2)
-    
+    @classmethod
     def return_book(self,borrowed):
         self.borrowed = borrowed
         book_return = books[borrowed]
@@ -92,7 +92,7 @@ class software():
         return True
         time.sleep(2)
        else : 
-        print('\n'+color.RED+'Book Not Available')
+        print('\n'+color.RED+'Book Not Available'+color.END)
         return False
         time.sleep(2)
 
@@ -160,12 +160,13 @@ class shelf():
         del books[Book_name]
         return True
     @classmethod
-    def get_book_count(self,book_tag) :
+    def get_book_count(self,book_tag,ask) :
         self.book_tag = book_tag
+        self.ask = ask 
         list_book_name = list(books.keys())
-        ask = input("\n"+color.BLUE + 'Do you want to get count of shelf(1) or whole library(2) : ' + color.END)
         if ask=='2' :
             print("\n"+color.CYAN+'total no of book in library are : ' + str(len(list_book_name)))
+            return len(list_book_name)
         try :
             count = 0
             for  no in range(0,(len(list_book_name))):
@@ -174,14 +175,14 @@ class shelf():
                 if ask =='1':
                     if book_detail_phir_se[2]==book_tag :
                         count += 1
-
+                    else : 
+                        pass
             if ask =='1':    
-                print("\n"+color.DARKCYAN+ "Total no of books in this genre are : " + str(count))
-            else :
-                print('Why')            
+                print("\n"+color.DARKCYAN+ "Total no of books in this genre are : " + str(count) +color.END)
+                return count     
 
         except IndexError:
             pass
-    def populate_book():
-        path = input("\n"+color.lightgreen+"Excel File ka path de na Love day : "+color.END)
+    def populate_book(path):
         populate(color,books,path)
+
