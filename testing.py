@@ -285,4 +285,3 @@ elif '6' in option:
 
   else : 
     exiting()
-
