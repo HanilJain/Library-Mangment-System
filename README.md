@@ -34,5 +34,5 @@ Run the testing.py it will install required dependencies
 * Keep all the given Files in same folder 
 * test_data.xlsx is for testing excel sheet feature  
 * Librarian Login detail 
-   -Email : big_daddy@pilani.bits-pilani.ac.in
-   -pwd : cometodaddy
+   - Email : big_daddy@pilani.bits-pilani.ac.in
+   - pwd : cometodaddy
